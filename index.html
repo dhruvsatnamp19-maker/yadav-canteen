@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yadav Canteen &amp; Restaurant | NMDC Special Dosa</title>
+<meta name="description" content="Yadav Canteen & Restaurant, NMDC Special Dosa. Menu dekhein aur call karein: 6260221194">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0d0c;--panel:#181614;--line:#2c2823;--text:#f3ece3;--muted:#a79d90;--gold:#f0a04b;--head:"Cormorant Garamond",Georgia,serif;--body:"Hind",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;font-size:1.05rem}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--head);color:var(--gold);line-height:1.08}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:10px}
+section{padding:76px 0}
+header{position:sticky;top:0;z-index:10;background:rgba(14,13,12,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font-family:var(--head);font-weight:700;font-size:1.4rem;color:var(--gold);text-decoration:none}
+nav a{margin-left:20px;text-decoration:none;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--text)}
+.btn{display:inline-block;padding:12px 26px;border-radius:999px;border:1.5px solid var(--gold);text-decoration:none;font:inherit;font-weight:600;cursor:pointer;background:none;color:var(--text)}
+.btn.fill{background:var(--gold);color:#1a1209}
+.btn:hover{transform:translateY(-2px)}
+.hero .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;align-items:center;min-height:calc(100vh - 62px);padding-top:30px;padding-bottom:30px}
+.hero h1{font-size:clamp(3rem,8.5vw,5.8rem);font-weight:700}
+.hero h1 span{display:block;font-size:.5em;color:var(--text);font-weight:600;margin-top:.25em}
+.hero p{color:var(--muted);max-width:28em;margin:20px 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.arch{border-radius:320px 320px 20px 20px;overflow:hidden;border:2px solid var(--gold);aspect-ratio:16/11;box-shadow:0 0 80px rgba(240,160,75,.18);animation:rise .9s ease-out both}
+.arch img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media(max-width:780px){.hero .wrap{grid-template-columns:1fr;min-height:0}.arch{border-radius:160px 160px 16px 16px;aspect-ratio:16/11}}
+.menu{background:#121110}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 30px}
+.tab{font:inherit;padding:8px 20px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--muted);cursor:pointer}
+.tab[aria-selected=true]{border-color:var(--gold);color:var(--gold)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.card .ph{aspect-ratio:16/10;background:#201d19;display:grid;place-items:center;font-size:3rem}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.card .in{padding:14px 16px 18px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.card h3{font-size:1.45rem;color:var(--text)}
+.price{font-family:var(--head);font-weight:700;font-size:1.5rem;color:var(--gold);white-space:nowrap}
+.loc{display:inline-block;text-decoration:none;border:1px solid var(--gold);border-radius:12px;padding:12px 16px;margin-top:4px}.loc:hover{background:rgba(240,160,75,.12)}.loc small{color:var(--muted)}
+.jhalak img{width:100%;display:block;border-radius:16px;border:2px solid var(--gold);margin-top:14px}
+.note{color:var(--muted);margin-top:22px;font-size:.92rem}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:36px}
+.contact dt{color:var(--gold);font-weight:600;margin-top:16px}
+iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:16px;filter:grayscale(.3)}
+@media(max-width:780px){.contact .wrap{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);text-align:center;padding:20px;color:var(--muted);font-size:.9rem}
+footer button{background:none;border:0;color:var(--muted);font:inherit;text-decoration:underline;cursor:pointer;margin-left:10px}
+.call{position:fixed;right:16px;bottom:16px;z-index:20;background:var(--gold);color:#1a1209;font-weight:700;padding:12px 20px;border-radius:999px;text-decoration:none;box-shadow:0 6px 24px rgba(0,0,0,.5)}
+dialog{background:var(--panel);color:var(--text);border:1px solid var(--gold);border-radius:16px;padding:24px;width:min(720px,94vw);max-height:90vh;overflow:auto;margin:auto}
+dialog::backdrop{background:rgba(0,0,0,.75)}
+dialog h2{font-size:2rem}
+input{font:inherit;background:#0e0d0c;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:9px 11px;width:100%}
+.row{display:grid;grid-template-columns:1.4fr .6fr 1fr 1.2fr auto;gap:8px;margin-bottom:8px}
+@media(max-width:640px){.row{grid-template-columns:1fr 1fr;padding-bottom:12px;border-bottom:1px solid var(--line)}}
+.msg{margin:10px 0;color:var(--gold);min-height:1.4em}
+.hidden{display:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#top">Yadav Canteen</a>
+  <nav><a href="#menu">Menu</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>Yadav Canteen &amp; Restaurant<span>NMDC Special Dosa</span></h1>
+    <p>Garam, kurkura dosa, sambar aur chutney ke saath. Chai aur coffee ke saath ek behtareen nashta.</p>
+    <div class="btns">
+      <a class="btn fill" href="#menu">Menu dekhein</a>
+      <a class="btn" href="tel:+916260221194">Call: 6260221194</a>
+      <a class="btn" href="https://maps.app.goo.gl/umVhX7PrgMqoNsWj6" target="_blank" rel="noopener">📍 Raasta dekhein</a>
+    </div>
+  </div>
+  <div class="arch"><img src="images/banner.jpg" alt="Yadav Canteen & Restaurant, NMDC Special Dosa"></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <h2>Hamara menu</h2>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="cards" id="cards"></div>
+  <p class="note">Rate badal sakte hain. Order ke liye call karein: 6260221194</p>
+</div></section>
+
+<section class="jhalak"><div class="wrap">
+  <h2>Hamari jhalak</h2>
+  <img src="images/banner2.jpg" alt="Yadav Canteen & Restaurant: dosa, idli, vada, pizza, chinese, snacks aur bahut kuch" loading="lazy">
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div>
+    <h2>Aaiye, milte hain</h2>
+    <dl>
+      <dt>Location</dt><dd><a class="loc" href="https://maps.app.goo.gl/umVhX7PrgMqoNsWj6" target="_blank" rel="noopener">📍 Yadav Canteen &amp; Restaurant, NMDC<br><small>Tap karein, Google Maps khul jayega</small></a></dd>
+      <dt>Phone</dt><dd><a href="tel:+916260221194">6260221194</a></dd>
+    </dl>
+    <div class="btns" style="margin-top:24px">
+      <a class="btn fill" href="https://maps.app.goo.gl/umVhX7PrgMqoNsWj6" target="_blank" rel="noopener">Google Maps pe dekhein</a>
+    </div>
+  </div>
+  <iframe title="Map" loading="lazy" src="https://www.google.com/maps?q=Yadav+Canteen+%26+Restaurant+NMDC&output=embed"></iframe>
+</div></section>
+</main>
+
+<footer>© <span id="yr"></span> Yadav Canteen &amp; Restaurant <button id="owner">Owner login</button></footer>
+<a class="call" href="tel:+916260221194">Call karein</a>
+
+<dialog id="dlg">
+  <h2>Owner panel</h2>
+  <div id="login">
+    <p style="color:var(--muted);margin-bottom:12px">Sirf owner ke number (6260221194) pe OTP jayega.</p>
+    <div id="rc"></div>
+    <button class="btn fill" id="sendOtp">OTP bhejein</button>
+    <div id="otpBox" class="hidden" style="margin-top:14px"><input id="otp" inputmode="numeric" placeholder="6 ank ka OTP yahan paste karein"><button class="btn fill" id="verify" style="margin-top:10px">Verify karein</button></div>
+  </div>
+  <div id="editor" class="hidden">
+    <p style="color:var(--muted);margin-bottom:12px">Item ka naam, rate, category aur photo ka link bharein. Photo ke liye image ka link paste karein (ya <code>images/naam.jpg</code>).</p>
+    <div id="rows"></div>
+    <div class="btns" style="margin-top:12px"><button class="btn" id="add">+ Naya item</button><button class="btn fill" id="save">Save karein</button></div>
+  </div>
+  <p class="msg" id="msg"></p>
+  <button class="btn" id="close" style="margin-top:6px">Band karein</button>
+</dialog>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+/* ===== SETTINGS ===== */
+const OWNER_PHONE = "+916260221194";
+// Firebase console se milne wali details yahan paste karein (setup steps alag se diye hain).
+const FIREBASE_CONFIG = null;
+/* ===================== */
+
+let menu = [
+  {name:"NMDC Special Dosa", price:60, cat:"Dosa", img:"images/dosa.jpg"},
+  {name:"Chai", price:15, cat:"Chai & Coffee", img:"images/chai.jpg"},
+  {name:"Coffee", price:30, cat:"Chai & Coffee", img:"images/coffee.jpg"}
+];
+const ICON = {"Dosa":"🥞","Chai & Coffee":"☕"};
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let active = "Sab";
+
+function render(){
+  const cats = ["Sab", ...new Set(menu.map(m => m.cat))];
+  $("tabs").innerHTML = cats.map(c => `<button class="tab" role="tab" aria-selected="${c===active}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+  $("cards").innerHTML = menu.filter(m => active==="Sab" || m.cat===active).map(m =>
+    `<article class="card"><div class="ph">${m.img ? `<img src="${esc(m.img)}" alt="${esc(m.name)}" loading="lazy">` : (ICON[m.cat]||"🍽️")}</div>
+     <div class="in"><h3>${esc(m.name)}</h3><span class="price">₹${esc(m.price)}</span></div></article>`).join("");
+}
+$("tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if(b){ active = b.dataset.c; render(); } });
+$("yr").textContent = new Date().getFullYear();
+
+/* Firebase: sabko menu dikhana + owner ka OTP login */
+let db = null, auth = null;
+if (FIREBASE_CONFIG && window.firebase) {
+  firebase.initializeApp(FIREBASE_CONFIG);
+  db = firebase.firestore(); auth = firebase.auth(); auth.languageCode = "hi";
+  db.collection("site").doc("menu").get().then(d => {
+    if (d.exists && Array.isArray(d.data().items) && d.data().items.length) { menu = d.data().items; render(); }
+  }).catch(() => {});
+}
+render();
+
+const dlg = $("dlg"), msg = t => $("msg").textContent = t || "";
+$("owner").onclick = () => { msg(); dlg.showModal(); if (auth && auth.currentUser && auth.currentUser.phoneNumber === OWNER_PHONE) showEditor(); };
+$("close").onclick = () => dlg.close();
+
+let confirmation = null, verifier = null;
+$("sendOtp").onclick = async () => {
+  if (!auth) return msg("Pehle Firebase setup poora karein (FIREBASE_CONFIG khaali hai).");
+  try {
+    msg("OTP bhej rahe hain...");
+    verifier = verifier || new firebase.auth.RecaptchaVerifier("rc", {size:"invisible"});
+    confirmation = await auth.signInWithPhoneNumber(OWNER_PHONE, verifier);
+    $("otpBox").classList.remove("hidden"); msg("OTP bhej diya gaya hai.");
+  } catch (e) { msg("OTP nahi gaya: " + e.message); }
+};
+$("verify").onclick = async () => {
+  try {
+    const r = await confirmation.confirm($("otp").value.trim());
+    if (r.user.phoneNumber !== OWNER_PHONE) { await auth.signOut(); return msg("Ye number allowed nahi hai."); }
+    msg(""); showEditor();
+  } catch (e) { msg("Galat OTP, dobara try karein."); }
+};
+
+function showEditor(){
+  $("login").classList.add("hidden"); $("editor").classList.remove("hidden"); drawRows();
+}
+function drawRows(){
+  $("rows").innerHTML = menu.map((m,i) => `<div class="row">
+    <input data-i="${i}" data-k="name" value="${esc(m.name)}" placeholder="Item ka naam" aria-label="Naam">
+    <input data-i="${i}" data-k="price" type="number" min="0" value="${esc(m.price)}" placeholder="Rate" aria-label="Rate">
+    <input data-i="${i}" data-k="cat" value="${esc(m.cat)}" placeholder="Category" aria-label="Category">
+    <input data-i="${i}" data-k="img" value="${esc(m.img||"")}" placeholder="Photo ka link" aria-label="Photo link">
+    <button class="btn" data-del="${i}" aria-label="Hatayein">✕</button></div>`).join("");
+}
+$("rows").addEventListener("input", e => { const t = e.target; if (t.dataset.k) menu[t.dataset.i][t.dataset.k] = t.dataset.k==="price" ? Number(t.value) : t.value; });
+$("rows").addEventListener("click", e => { const b = e.target.closest("[data-del]"); if(b){ menu.splice(b.dataset.del,1); drawRows(); } });
+$("add").onclick = () => { menu.push({name:"",price:0,cat:"Naya",img:""}); drawRows(); };
+$("save").onclick = async () => {
+  try {
+    menu = menu.filter(m => m.name.trim());
+    await db.collection("site").doc("menu").set({items: menu});
+    active = "Sab"; render(); drawRows(); msg("Menu save ho gaya. Ab website pe sabko dikhega.");
+  } catch (e) { msg("Save nahi hua: " + e.message); }
+};
+</script>
+</body>
+</html>
